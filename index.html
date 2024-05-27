@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture Carousel</title>
+    <link rel="stylesheet" href="carousel.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <div class="main-dv">
+        <div class="carol">
+            <button onclick="changePrev(-1)"><span class="material-symbols-outlined">arrow_back_ios</span></button>
+            <img id="carouselImg" src="tesla__xxx.jpg" alt="">
+            <button onclick="changeNext(1)"><span class="material-symbols-outlined">arrow_forward_ios</span></button>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    let picArray = ['bluecar.jpg', 'cybtrk.jpg', 'jeep.jpg', 'redcar.jpg', 'whitecar.webp']
+    let firstPicture = [0];
+
+    //document.getElementById('carouselImg').src = picArray[firstPicture]
+    function  change(index) {
+        if (index >= picArray.length) {
+            firstPicture = 0;
+        } else if(index < 0) {
+            firstPicture = picArray.length + 1;
+        } else {
+            firstPicture = index
+        }
+        document.getElementById('carouselImg').src = picArray[firstPicture]
+        //console.log(index);
+    }
+    function changeNext(index) {
+        change(firstPicture + index)
+    }
+    function changePrev(index) {
+        change(firstPicture - index)
+    }
+</script>

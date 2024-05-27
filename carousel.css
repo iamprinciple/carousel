@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+.main-dv{
+    width: 100%;
+    height: 620px;
+    /* background-color: burlywood; */
+    background: url(background.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 70px;
+}
+.carol{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* position: relative; */
+}
+.carol button{
+    width: 40px;
+    height: 150px;
+    background-color: transparent;
+    border: 2px solid lightblue;
+    border-radius: 50px;
+    /* position: absolute; */
+}
+.carol button:hover{
+    background-color: lightblue;
+}
+
+.carol img{
+    width: 70%;
+    height: 500px;
+    border-radius: 10px;
+}
